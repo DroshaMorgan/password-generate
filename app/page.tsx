@@ -79,7 +79,17 @@ export default function Home() {
         array.sort(() => Math.random() - 0.5);
       const characters = shuffleArray(availableCharacters).slice(0, length);
       setHandleText(characters.join(""));
-      return characters;
+
+      if (symbols) {
+        if (
+          characters.filter((element: any) => symbolsArray.includes(element))
+            .length > 0
+        ) {
+          return characters;
+        } else {
+          generateTheWord(length, uppercase, lowercase, numbers, symbols);
+        }
+      }
     };
 
     generateTheWord(length, uppercase, lowercase, numbers, symbols);
