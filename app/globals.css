@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,400&family=Roboto&display=swap');
+
+body{
+  font-family: Roboto, Arial, Nova, Cond;
+}
+
+body{
+  @apply text-sky-600;
+}
+
+.wrapper {
+  @apply bg-sky-100 h-screen flex items-center;
+}
+
+.container {
+  @apply bg-sky-200 w-[600px] m-auto rounded-md;
+}
+
+.wrapper-box {
+  @apply p-10;
+}
+
+.word-criteria__box {
+  @apply flex justify-between py-2 px-0;
+}
+
+.generate-button {
+  @apply mt-8 w-full h-12 border-0 cursor-pointer rounded bg-sky-300 text-base font-medium;
+}
+
+.password-box {
+  @apply flex justify-between;
+}
+
+.password-box > input[type='text'] {
+  @apply w-2/3 h-10 mr-3 text-base text-sky-700 p-1;
+}
+
+button.copy-button {
+  @apply block w-1/4 cursor-pointer border-0 text-sm font-medium bg-sky-300;
+}
+
+.word-criteria__box input[type='checkbox'] {
+  @apply w-5 h-5;
+}
+
+input[type='number'] {
+  @apply w-12 h-6 px-1 rounded;
+}
+input[type='text'] {
+  @apply rounded;
+}
