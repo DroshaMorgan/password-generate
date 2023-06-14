@@ -7,7 +7,7 @@ export default function Home() {
     uppercase: true,
     lowercase: true,
     numbers: true,
-    symbols: false,
+    symbols: true,
   });
   const [handleText, setHandleText] = useState("");
   const [copied, setCopied] = useState(false);
@@ -51,7 +51,7 @@ export default function Home() {
     const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     const symbolsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
-    const characterCodes = Array.from(Array(26)).map((_e, i) => i + 97);
+    const characterCodes = Array.from(Array(26)).map((_, i) => i + 97);
     const lowerCaseLetters = characterCodes.map((code) =>
       String.fromCharCode(code)
     );
@@ -74,6 +74,7 @@ export default function Home() {
         ...(numbers ? numbersArray : []),
         ...(symbols ? symbolsArray : []),
       ];
+
       const shuffleArray = (array: any) =>
         array.sort(() => Math.random() - 0.5);
       const characters = shuffleArray(availableCharacters).slice(0, length);
