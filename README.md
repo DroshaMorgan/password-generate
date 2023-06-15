@@ -1,5 +1,5 @@
 ## Посмотреть сайт:
-[next-js-app-first](https://password-generate-droshamorgan.vercel.app/)
+[password-generator](https://password-generate-droshamorgan.vercel.app/)
 
 ##
 
