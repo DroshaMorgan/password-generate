@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [passwordGen, setPasswordGen] = useState({
-    length: 12,
+    length: 10,
     uppercase: true,
     lowercase: true,
     numbers: true,
@@ -11,6 +11,27 @@ export default function Home() {
   });
   const [handleText, setHandleText] = useState("");
   const [copied, setCopied] = useState(false);
+
+  // const handleChangeUppercase = () => {
+  //   setPasswordGen({
+  //     ...passwordGen,
+  //     uppercase: !passwordGen.uppercase,
+  //   });
+  // };
+
+  // const handleChangeLowercase = () => {
+  //   setPasswordGen({
+  //     ...passwordGen,
+  //     lowercase: !passwordGen.lowercase,
+  //   });
+  // };
+
+  // const handleChangeNumbers = () => {
+  //   setPasswordGen({
+  //     ...passwordGen,
+  //     numbers: !passwordGen.numbers,
+  //   });
+  // };
 
   const handleChangeSymbols = () => {
     setPasswordGen({
@@ -79,6 +100,38 @@ export default function Home() {
       };
 
       typeCheck(symbols, symbolsArray);
+
+      // const typeCheck = (
+      //   type: any,
+      //   typeArray: any,
+      //   type2: any,
+      //   typeArray2: any
+      // ) => {
+      //   if (type) {
+      //     if (
+      //       characters.filter((element: any) => typeArray.includes(element))
+      //         .length > 0
+      //     ) {
+      //       if (type2) {
+      //         if (
+      //           characters.filter((element: any) =>
+      //             typeArray2.includes(element)
+      //           ).length > 0
+      //         ) {
+      //           return characters;
+      //         } else {
+      //           generateTheWord(length, uppercase, lowercase, numbers, symbols);
+      //         }
+      //       } else {
+      //         return characters;
+      //       }
+      //     } else {
+      //       generateTheWord(length, uppercase, lowercase, numbers, symbols);
+      //     }
+      //   }
+      // };
+
+      // typeCheck(numbers, numbersArray, symbols, symbolsArray);
     };
 
     generateTheWord(length, uppercase, lowercase, numbers, symbols);
@@ -123,6 +176,42 @@ export default function Home() {
             <div className="ml-2 w-3">{passwordGen.length}</div>
           </div>
         </div>
+        {/* <div className="word-criteria__box">
+          <div>
+            <label>Include uppercase letters</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              checked={passwordGen.uppercase}
+              onChange={handleChangeUppercase}
+            />
+          </div>
+        </div>
+        <div className="word-criteria__box">
+          <div>
+            <label>Include lowercase letters</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              checked={passwordGen.lowercase}
+              onChange={handleChangeLowercase}
+            />
+          </div>
+        </div> */}
+        {/* <div className="word-criteria__box">
+          <div>
+            <label>Include numbers</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              checked={passwordGen.numbers}
+              onChange={handleChangeNumbers}
+            />
+          </div>
+        </div> */}
         <div className="word-criteria__box">
           <div>
             <label>Include symbols</label>

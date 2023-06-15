@@ -41,7 +41,7 @@ body{
 }
 
 button.copy-button {
-  @apply block w-1/4 cursor-pointer border-0 text-sm font-medium bg-sky-300;
+  @apply block w-1/4 cursor-pointer rounded border-0 text-sm font-medium bg-sky-300;
 }
 
 .word-criteria__box input[type='checkbox'] {
